@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'package:rlinkers/pages/home_page.dart';
-
 import '../pages/profile_page.dart';
 import '../pages/prueba_page.dart';
 import '../pages/login_page.dart';
 import '../pages/structure_page.dart';
+import '../pages/project_list.dart';
+
 class NavigationDrawerWidget extends StatelessWidget {
   const NavigationDrawerWidget({Key? key}) : super(key: key);
 
@@ -76,7 +76,9 @@ class NavigationDrawerWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: ListTile(
-
+            onTap: (){
+              selectedItem(context, 3);
+            },
             contentPadding: EdgeInsets.symmetric(vertical: 10,horizontal: 50),
             leading: Icon(Icons.article, color: Colors.blue.shade400,),
             title: Text(
@@ -157,6 +159,11 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => StructurePage(MyLoginPage(),iconos.sinIcono, "Login"),
+        ));
+        break;
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => StructurePage(ProjectList(),iconos.sinIcono, "Projects"),
         ));
         break;
     }

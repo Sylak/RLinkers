@@ -46,6 +46,11 @@ dependencies:
   firebase_messaging: ^12.0.1
   flutter_pw_validator: ^1.4.2
   email_validator: ^2.1.17
+  file_picker: ^5.1.0
+  timelines: ^0.1.0
+  http: ^0.13.5
+  firebase_storage: ^10.3.8
+  universal_io: ^2.0.4
 
 dev_dependencies:
   flutter_test:
